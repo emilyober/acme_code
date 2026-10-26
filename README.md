@@ -56,27 +56,13 @@ AA 55 AA 55
 ```
 
 - SPI SCK and MOSI signals verified using an oscilloscope
+- BLE temperature notifications supported
 - fake temperature samples can be generated
 - SPI activity and BLE temperature transmission can run from the same program
 - sample interval can be changed in software
-
-Example test flow:
-
-```text
-Fake temperature
-      |
-      v
-Generate SPI transaction
-      |
-      v
-Send temperature over BLE
-      |
-      v
-Wait for sample interval
-      |
-      v
-Repeat
-```
+- I2C0 interface enabled and available for TMP117 communication
+- TMP117 register-access code prepared in software
+- fake temperature fallback used while the TMP117 hardware is not connected
 
 ## Verified Results
 
